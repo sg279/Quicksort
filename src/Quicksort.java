@@ -36,7 +36,7 @@ public class Quicksort {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> unsorted = new ArrayList<>();
+        /*ArrayList<Integer> unsorted = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 5000; i++) {
             unsorted.add(random.nextInt(10000));
@@ -51,7 +51,10 @@ public class Quicksort {
         }
         System.out.println(runTest(reverseSorted, 1000));
         System.out.println(runTest(unsorted, 1000));
-        System.out.println(runTest(sorted, 1000));
+        System.out.println(runTest(sorted, 1000));*/
+        System.out.println(runTest(createList(0,5000),1000));
+        System.out.println(runTest(createList(0.5,5000),1000));
+        System.out.println(runTest(createList(1,5000),1000));
 
     }
 
@@ -100,5 +103,18 @@ public class Quicksort {
         int n = list.size();
 
         return 1-(swaps/(0.5*(n-1)*n));
+    }
+
+    public static ArrayList<Integer> createList(double randomness, int size){
+        ArrayList<Integer> list = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            list.add(i);
+        }
+        for(int i = 0; i<(randomness*size); i++){
+            list.set(random.nextInt(size), random.nextInt(size*2));
+        }
+        return list;
+
     }
 }

@@ -36,7 +36,7 @@ public class Quicksort {
     }
 
     public static void main(String[] args) {
-        /*ArrayList<Integer> unsorted = new ArrayList<>();
+        ArrayList<Integer> unsorted = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 5000; i++) {
             unsorted.add(random.nextInt(10000));
@@ -49,13 +49,29 @@ public class Quicksort {
         for (int i = 0; i < 5000; i++) {
             reverseSorted.add(5000 - i);
         }
+        ArrayList<Integer> descendAscend = new ArrayList<>();
+        for (int i = 0; i < 2500; i++) {
+            descendAscend.add(2500 - i);
+        }
+        for (int i = 0; i < 2500; i++) {
+            descendAscend.add(i);
+        }
+        ArrayList<Integer> ascendDescend = new ArrayList<>();
+        for (int i = 0; i < 2500; i++) {
+            ascendDescend.add(i);
+        }
+        for (int i = 0; i < 2500; i++) {
+            ascendDescend.add(2500-i);
+        }
         System.out.println(runTest(reverseSorted, 1000));
         System.out.println(runTest(unsorted, 1000));
-        System.out.println(runTest(sorted, 1000));*/
-        System.out.println(runTest(createList(0,5000),1000));
+        System.out.println(runTest(sorted, 1000));
+        System.out.println(runTest(ascendDescend, 10));
+        System.out.println(runTest(descendAscend, 10));
+        /*System.out.println(runTest(createList(0,5000),1000));
         System.out.println(runTest(createList(0.5,5000),1000));
         System.out.println(runTest(createList(1,5000),1000));
-
+*/
     }
 
     public static String runTest(ArrayList<Integer> list, int tests) {
